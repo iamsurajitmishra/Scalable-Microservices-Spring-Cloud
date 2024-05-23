@@ -22,10 +22,6 @@ public class EmployeeController {
 
     private  EmployeeService employeeService;
 
-    @GetMapping("/hello")
-    public String  hello(){
-        return "hello from employee-service";
-    }
 
     @PostMapping("/save")
     public EmployeeDto saveEmployee(@RequestBody EmployeeDto employeeDto){
@@ -42,7 +38,5 @@ public class EmployeeController {
     public ResponseEntity<APIResponseDto> getEmployeeById(@PathVariable Long id) {
         return new ResponseEntity<>(employeeService.getEmployeeById(id), HttpStatus.OK);
     }
-
-
-
+    
 }
