@@ -23,7 +23,7 @@ Netfix-Eureka-Server service registry and discovery.
 
 ## Microservices-Communication
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Microservices-communication](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/spring-cloud-microservice-communication.png)
 
 
 ## Service-Discovery-using-Netflix-Eureka-Server
