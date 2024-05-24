@@ -28,7 +28,7 @@ Netfix-Eureka-Server service registry and discovery.
 
 ## Service-Discovery-using-Netflix-Eureka-Server
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Netflix-Eureka-Server => Service registry & Discovery](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/spring-cloud-Netflix-Eureka-Server.png)
 
 
 ## API-Gateway
