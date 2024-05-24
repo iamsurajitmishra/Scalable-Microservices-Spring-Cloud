@@ -17,7 +17,7 @@
 
 ## Spring-Cloud-Architechture
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Spring-Cloud-Architechture](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/spring-cloud-architechture.png)
 
 
 ## Microservices-Communication
