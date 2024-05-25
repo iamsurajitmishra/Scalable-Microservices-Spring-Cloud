@@ -5,13 +5,11 @@ import com.org.employeeservice.dto.DepartmentDto;
 import com.org.employeeservice.dto.EmployeeDto;
 import com.org.employeeservice.entity.Employee;
 import com.org.employeeservice.repository.EmployeeRepository;
+import com.org.employeeservice.service.APIClient;
 import com.org.employeeservice.service.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.List;
 import java.util.Optional;
@@ -23,8 +21,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     private  EmployeeRepository employeeRepository;
     private ModelMapper modelMapper;
+    private APIClient apiClient;
     //private RestTemplate restTemplate;
-    private WebClient webClient;
+    //private WebClient webClient;
+
 
     @Override
     public EmployeeDto saveEmployee(EmployeeDto employeeDto) {
@@ -47,14 +47,17 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeDto employeeDto = modelMapper.map(optionalEmployee.get(), EmployeeDto.class);
 
         //ResponseEntity<DepartmentDto> responseEntityDepartmentDto = restTemplate.getForEntity("http://localhost:8080/api/department-service/"+optionalEmployee.get().getDepartmentCode(), DepartmentDto.class);
-        DepartmentDto departmentDto = webClient.get().uri("http://localhost:8080/api/department-service/"+optionalEmployee.get().getDepartmentCode())
-                .retrieve()
-                .bodyToMono(DepartmentDto.class)
-                .block();
+//        DepartmentDto departmentDto = webClient.get().uri("http://localhost:8080/api/department-service/"+optionalEmployee.get().getDepartmentCode())
+//                .retrieve()
+//                .bodyToMono(DepartmentDto.class)
+//                .block();
+
+       DepartmentDto departmentDto = apiClient.findByDepartmentCode(employeeDto.getDepartmentCode());
 
         //DepartmentDto departmentDto =responseEntityDepartmentDto.getBody();
+        
+        //API response
         APIResponseDto apiResponseDto =new APIResponseDto();
-
         apiResponseDto.setEmployeeDto(employeeDto);
         apiResponseDto.setDepartmentDto(departmentDto);
 
