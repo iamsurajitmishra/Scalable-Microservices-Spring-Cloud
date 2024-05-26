@@ -31,7 +31,7 @@ Netfix-Eureka-Server service registry and discovery.
 ![Netflix-Eureka-Server => Service registry & Discovery](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/spring-cloud-Netflix-Eureka-Server.png)
 
 
-## API-Gateway
+## API-Gateway architechture
 
 ![API-GATE-WAY](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/API-Gate-Way.png)
 
