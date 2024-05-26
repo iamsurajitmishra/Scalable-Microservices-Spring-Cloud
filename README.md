@@ -7,11 +7,11 @@
 ## Tech Stack
 
 
-**Server:** Spring-Boot, JPA, Hibernate, Spring-Boot-REST-API
+**Server:** Spring-Boot, Spring-Boot-REST-API
 
 **Client:** Postman, Browser
 
-**Database:** MySQL
+**Database:** MySQL,JPA, Hibernate
 
 **Service Discovery:** Spring Cloud relies on services like Eureka Server to help register and locate microservices within the application.
 
