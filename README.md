@@ -33,7 +33,7 @@ Netfix-Eureka-Server service registry and discovery.
 
 ## API-Gateway
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![API-GATE-WAY](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/API-Gate-Way.png)
 
 
 ## API Reference
