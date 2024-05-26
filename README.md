@@ -19,7 +19,7 @@
 
 **Routing:** Tools like Spring Cloud Gateway can be used to provide a single entry point for API requests and route them to appropriate microservices.
 
-**Resilience:** Libraries like Hystrix can be used to implement features like circuit breakers and fault tolerance for handling service failures gracefully.
+**Resilience:** Libraries like resilience4j can be used to implement features like circuit breakers and fault tolerance for handling service failures gracefully.
 
 **Other functionalities:** Spring Cloud offers various other tools for distributed messaging, task execution, and monitoring in a microservices architecture.
 
