@@ -7,8 +7,7 @@
 ## Tech Stack
 
 
-**Server:** Spring-Boot, JPA, Hibernate, Spring-Boot-REST-API, Feign-Client for microservice communication
-Netfix-Eureka-Server service registry and discovery.
+**Server:** Spring-Boot, JPA, Hibernate, Spring-Boot-REST-API
 
 **Client:** Postman, Browser
 
