@@ -13,5 +13,5 @@ build/
 *.tmp
 
 # Application-specific settings (adjust as needed)
-application.properties
+#application.properties
 # You can add other application-specific configuration files here
