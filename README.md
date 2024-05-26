@@ -35,6 +35,7 @@ Netfix-Eureka-Server service registry and discovery.
 
 ![API-GATE-WAY](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/API-Gate-Way.png)
 
+### [Centralized server link](https://github.com/iamsurajitmishra/config-server-repo/tree/main) 
 
 ## API Reference
 
