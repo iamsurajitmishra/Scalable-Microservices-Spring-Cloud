@@ -7,7 +7,7 @@
 ## Tech Stack
 
 
-**Server:** Spring-Boot, Spring-Boot-REST-API
+**Server:** Spring-Boot embeded Tomcat Server, Spring-Boot-REST-API
 
 **Client:** Postman, Browser
 
