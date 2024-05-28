@@ -29,6 +29,9 @@
 
 ![Spring-Cloud-Architechture](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/spring-cloud-architechture.png)
 
+## API-Gateway architechture
+
+![API-GATE-WAY](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/API-Gate-Way.png)
 
 ## Microservices-Communication
 
@@ -38,11 +41,6 @@
 ## Service-Discovery-using-Netflix-Eureka-Server
 
 ![Netflix-Eureka-Server => Service registry & Discovery](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/spring-cloud-Netflix-Eureka-Server.png)
-
-
-## API-Gateway architechture
-
-![API-GATE-WAY](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/API-Gate-Way.png)
 
 
 ### Config-Server manual refresh
