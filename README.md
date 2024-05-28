@@ -46,9 +46,14 @@
 
 ### [Centralized server link](https://github.com/iamsurajitmishra/config-server-repo/tree/main) 
 
-### Config-server manual refresh
+### Config-Server manual refresh
 
 ![Config-Server-manual-refresh](https://github.com/iamsurajitmishra/Scalable-Microservices-Spring-Cloud/blob/master/design-screen-shot/config-server-refresh-manually.png) 
+
+### Config-Server auto refresh
+
+![Config-Server-auto-refresh](https://github.com/iamsurajitmishra/Scalable-Microservices-Spring-Cloud/blob/master/design-screen-shot/config-server-message-brokerpng.png) 
+
 
 ## Rabbitmq integration with spring cloud bus - 
 
