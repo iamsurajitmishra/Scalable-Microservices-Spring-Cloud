@@ -44,7 +44,6 @@
 
 ![API-GATE-WAY](https://github.com/iamsurajitmishra/Spring-Cloud-microservices/blob/master/design-screen-shot/API-Gate-Way.png)
 
-### [Centralized server link](https://github.com/iamsurajitmishra/config-server-repo/tree/main) 
 
 ### Config-Server manual refresh
 
@@ -70,6 +69,7 @@
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
 		</dependency>
 ```
+### [Centralized Config server repository](https://github.com/iamsurajitmishra/config-server-repo/tree/main) 
 
 ## API Reference
 
