@@ -71,11 +71,6 @@
 		</dependency>
 ```
 
-
-
-### [Config-Server-auto-refresh-refresh](https://github.com/iamsurajitmishra/Scalable-Microservices-Spring-Cloud/blob/master/design-screen-shot/config-server-refresh-manually.png) 
-
-
 ## API Reference
 
 #### Get all items
