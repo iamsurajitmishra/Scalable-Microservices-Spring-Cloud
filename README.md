@@ -46,6 +46,28 @@
 
 ### [Centralized server link](https://github.com/iamsurajitmishra/config-server-repo/tree/main) 
 
+### [Config-Server-manual-refresh](https://github.com/iamsurajitmishra/Scalable-Microservices-Spring-Cloud/blob/master/design-screen-shot/config-server-refresh-manually.png) 
+
+## Rabbitmq integration with spring cloud bus - 
+
+### INSTALL rabbitmq
+* pull rabbitmq docker image
+  *  docker pull rabbitmq:3.11.0
+  *  docker run --rm  -it -p 5672:5672 rabbitmq:3.11.0
+    
+### dependency needed to add
+'''
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+'''
+
+
+
+### [Config-Server-auto-refresh-refresh](https://github.com/iamsurajitmishra/Scalable-Microservices-Spring-Cloud/blob/master/design-screen-shot/config-server-refresh-manually.png) 
+
+
 ## API Reference
 
 #### Get all items
