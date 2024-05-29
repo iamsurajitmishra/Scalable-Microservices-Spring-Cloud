@@ -51,7 +51,6 @@
 
 ![Config-Server-auto-refresh](https://github.com/iamsurajitmishra/Scalable-Microservices-Spring-Cloud/blob/master/design-screen-shot/config-server-message-brokerpng.png) 
 
-
 ## Rabbitmq integration with spring cloud bus - 
 ```
 ### INSTALL rabbitmq
@@ -68,6 +67,10 @@
 		</dependency>
 ```
 ### [Centralized Config server repository](https://github.com/iamsurajitmishra/config-server-repo/tree/main) 
+
+### Circuit-Breaker-Pattern
+![Circuit-Breaker-Pattern](https://github.com/iamsurajitmishra/Scalable-Microservices-Spring-Cloud/blob/master/design-screen-shot/circuit-breaker-pattern.png) 
+
 
 ## API Reference
 
