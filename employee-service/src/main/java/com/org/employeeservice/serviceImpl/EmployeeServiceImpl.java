@@ -7,6 +7,7 @@ import com.org.employeeservice.entity.Employee;
 import com.org.employeeservice.repository.EmployeeRepository;
 import com.org.employeeservice.service.APIClient;
 import com.org.employeeservice.service.EmployeeService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private  EmployeeRepository employeeRepository;
     private ModelMapper modelMapper;
     private APIClient apiClient;
+
     //private RestTemplate restTemplate;
     //private WebClient webClient;
 
@@ -40,6 +42,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .collect(Collectors.toList());
     }
 
+    @CircuitBreaker(name = "${spring.application.name}", fallbackMethod = "getDefaultDepartment")
     @Override
     public APIResponseDto getEmployeeById(Long id) {
 
@@ -63,4 +66,30 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         return apiResponseDto;
     }
+
+    public APIResponseDto getDefaultDepartment(Long id, Exception exception) {
+
+        Optional<Employee> optionalEmployee = employeeRepository.findById(id);
+        EmployeeDto employeeDto = modelMapper.map(optionalEmployee.get(), EmployeeDto.class);
+
+        //ResponseEntity<DepartmentDto> responseEntityDepartmentDto = restTemplate.getForEntity("http://localhost:8080/api/department-service/"+optionalEmployee.get().getDepartmentCode(), DepartmentDto.class);
+//        DepartmentDto departmentDto = webClient.get().uri("http://localhost:8080/api/department-service/"+optionalEmployee.get().getDepartmentCode())
+//                .retrieve()
+//                .bodyToMono(DepartmentDto.class)
+//                .block();
+
+        DepartmentDto departmentDto = new DepartmentDto();
+        departmentDto.setDepartmentName("DEFAULT");
+        departmentDto.setDepartmentCode("DFT-001");
+        departmentDto.setDepartmentDescription("Department Description");
+
+
+        //API response
+        APIResponseDto apiResponseDto =new APIResponseDto();
+        apiResponseDto.setEmployeeDto(employeeDto);
+        apiResponseDto.setDepartmentDto(departmentDto);
+
+        return apiResponseDto;
+    }
+
 }
