@@ -7,9 +7,12 @@ import com.org.employeeservice.entity.Employee;
 import com.org.employeeservice.repository.EmployeeRepository;
 import com.org.employeeservice.service.APIClient;
 import com.org.employeeservice.service.EmployeeService;
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+//import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,6 +26,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private  EmployeeRepository employeeRepository;
     private ModelMapper modelMapper;
     private APIClient apiClient;
+    private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeServiceImpl.class);
 
     //private RestTemplate restTemplate;
     //private WebClient webClient;
@@ -42,9 +46,12 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .collect(Collectors.toList());
     }
 
-    @CircuitBreaker(name = "${spring.application.name}", fallbackMethod = "getDefaultDepartment")
+    //@CircuitBreaker(name = "${spring.application.name}", fallbackMethod = "getDefaultDepartment")
+    @Retry(name = "${spring.application.name}", fallbackMethod = "getDefaultDepartment")
     @Override
     public APIResponseDto getEmployeeById(Long id) {
+
+        LOGGER.info("inside getEmployeeById");
 
         Optional<Employee> optionalEmployee = employeeRepository.findById(id);
         EmployeeDto employeeDto = modelMapper.map(optionalEmployee.get(), EmployeeDto.class);
@@ -69,6 +76,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     public APIResponseDto getDefaultDepartment(Long id, Exception exception) {
 
+        LOGGER.info("inside getDefaultDepartment");
         Optional<Employee> optionalEmployee = employeeRepository.findById(id);
         EmployeeDto employeeDto = modelMapper.map(optionalEmployee.get(), EmployeeDto.class);
 
