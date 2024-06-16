@@ -72,6 +72,15 @@
 ![Circuit-Breaker-Pattern](https://github.com/iamsurajitmishra/Scalable-Microservices-Spring-Cloud/blob/master/design-screen-shot/circuit-breaker-pattern.png) 
 
 
+## Service-Host
+
+### employee-service -> http://localhost:9090
+### department-service -> http://localhost:8080
+### api-gate-way -> http://localhost:2000
+### config-server -> http://localhost:3000
+### service-discovery-> http://localhost:8761
+
+
 ## API Reference
 
 #### Get all items
