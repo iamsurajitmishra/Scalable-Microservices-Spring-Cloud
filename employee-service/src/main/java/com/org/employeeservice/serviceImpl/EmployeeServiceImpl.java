@@ -28,6 +28,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     private APIClient apiClient;
     private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeServiceImpl.class);
 
+    /**
+     *
+     * @param employeeDto
+     * @return
+     *
+     * Multiple way of communicating with other microservice
+     * with synchronous communication
+     *
+     *
+     */
     //private RestTemplate restTemplate;
     //private WebClient webClient;
 
@@ -80,7 +90,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         Optional<Employee> optionalEmployee = employeeRepository.findById(id);
         EmployeeDto employeeDto = modelMapper.map(optionalEmployee.get(), EmployeeDto.class);
 
-        //ResponseEntity<DepartmentDto> responseEntityDepartmentDto = restTemplate.getForEntity("http://localhost:8080/api/department-service/"+optionalEmployee.get().getDepartmentCode(), DepartmentDto.class);
+//        //ResponseEntity<DepartmentDto> responseEntityDepartmentDto = restTemplate.getForEntity("http://localhost:8080/api/department-service/"+optionalEmployee.get().getDepartmentCode(), DepartmentDto.class);
 //        DepartmentDto departmentDto = webClient.get().uri("http://localhost:8080/api/department-service/"+optionalEmployee.get().getDepartmentCode())
 //                .retrieve()
 //                .bodyToMono(DepartmentDto.class)
