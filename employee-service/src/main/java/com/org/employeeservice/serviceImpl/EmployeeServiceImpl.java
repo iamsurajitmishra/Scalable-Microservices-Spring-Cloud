@@ -35,11 +35,11 @@ public class EmployeeServiceImpl implements EmployeeService {
      *
      * Multiple way of communicating with other microservice
      * with synchronous communication
-     *
+     * private RestTemplate restTemplate;
+     * private WebClient webClient;
      *
      */
-    //private RestTemplate restTemplate;
-    //private WebClient webClient;
+
 
 
     @Override
