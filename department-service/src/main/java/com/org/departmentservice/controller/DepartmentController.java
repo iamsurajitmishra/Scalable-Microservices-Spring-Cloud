@@ -13,7 +13,7 @@ import java.util.List;
 
 @Tag(
         name = "Department Service CRUD APP",
-        description = "Employee can be added, deleted , updated, read from DB"
+        description = "Department can be added, deleted , updated, read from DB"
 )
 @RestController
 @RequestMapping("/api/department-service")
