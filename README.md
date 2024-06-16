@@ -66,6 +66,21 @@
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
 		</dependency>
 ```
+
+### Running Zipkin -> Distributed tracing
+
+#### Pull zipkin docker image
+```
+docker pull openzipkin/zipkin
+```
+
+#### Run zipkin container
+```
+docker run -d -p 9411:9411 openzipkin/zipkin
+
+```
+
+
 ### [Centralized Config server repository](https://github.com/iamsurajitmishra/config-server-repo/tree/main) 
 
 ### Circuit-Breaker-Pattern
@@ -74,11 +89,11 @@
 
 ## Service-Host
 
-### employee-service -> http://localhost:9090
-### department-service -> http://localhost:8080
-### api-gate-way -> http://localhost:2000
-### config-server -> http://localhost:3000
-### service-discovery-> http://localhost:8761
+#### employee-service -> http://localhost:9090
+#### department-service -> http://localhost:8080
+#### api-gate-way -> http://localhost:2000
+#### config-server -> http://localhost:3000
+#### service-discovery-> http://localhost:8761
 
 
 ## API Reference
